@@ -265,13 +265,8 @@ void MyWindow::render()
         mProgram->setUniformValue("NormalMatrix", mv1.normalMatrix());
         mProgram->setUniformValue("MVP", ProjectionMatrix * mv1);
 
-        mProgram->setUniformValue("Spot.Position", ViewMatrix * worldLight);
-        mProgram->setUniformValue("Spot.Intensity", QVector3D(0.9f, 0.9f, 0.9f));
-        mProgram->setUniformValue("Spot.Exponent", 30.0f );
-        mProgram->setUniformValue("Spot.Cutoff",   15.0f );
-        //mProgram->setUniformValue("Spot.direction", ViewMatrix.normalMatrix() * -worldLight.toVector3D());
-        mProgram->setUniformValue("Worldlight",     worldLight);
-        mProgram->setUniformValue("ViewNormalMatrix", ViewMatrix.normalMatrix());
+        mProgram->setUniformValue("Light.Position", ViewMatrix * worldLight);
+        mProgram->setUniformValue("Light.Intensity", QVector3D(0.9f, 0.9f, 0.9f));
 
         mProgram->setUniformValue("Material.Kd", 0.9f, 0.5f, 0.3f);
         mProgram->setUniformValue("Material.Ks", 0.95f, 0.95f, 0.95f);
@@ -298,13 +293,8 @@ void MyWindow::render()
         mProgram->setUniformValue("NormalMatrix", mv1.normalMatrix());
         mProgram->setUniformValue("MVP", ProjectionMatrix * mv1);
 
-        mProgram->setUniformValue("Spot.Position", ViewMatrix * worldLight);
-        mProgram->setUniformValue("Spot.Intensity", QVector3D(0.9f, 0.9f, 0.9f));
-        mProgram->setUniformValue("Spot.Exponent", 30.0f );
-        mProgram->setUniformValue("Spot.Cutoff",   15.0f );
-        //mProgram->setUniformValue("Spot.direction", ViewMatrix.normalMatrix() * -worldLight);
-        mProgram->setUniformValue("Worldlight",       worldLight);
-        mProgram->setUniformValue("ViewNormalMatrix", ViewMatrix.normalMatrix());
+        mProgram->setUniformValue("Light.Position", ViewMatrix * worldLight);
+        mProgram->setUniformValue("Light.Intensity", QVector3D(0.9f, 0.9f, 0.9f));
 
         mProgram->setUniformValue("Material.Kd", 0.7f, 0.7f, 0.7f);
         mProgram->setUniformValue("Material.Ks", 0.9f, 0.9f, 0.9f);
@@ -331,13 +321,8 @@ void MyWindow::render()
         mProgram->setUniformValue("NormalMatrix", mv1.normalMatrix());
         mProgram->setUniformValue("MVP", ProjectionMatrix * mv1);
 
-        mProgram->setUniformValue("Spot.Position", ViewMatrix * worldLight);
-        mProgram->setUniformValue("Spot.Intensity", QVector3D(0.9f, 0.9f, 0.9f));
-        mProgram->setUniformValue("Spot.Exponent", 30.0f );
-        mProgram->setUniformValue("Spot.Cutoff",   15.0f );
-        //mProgram->setUniformValue("Spot.direction", ViewMatrix.normalMatrix() * -worldLight);
-        mProgram->setUniformValue("Worldlight",       worldLight);
-        mProgram->setUniformValue("ViewNormalMatrix", ViewMatrix.normalMatrix());
+        mProgram->setUniformValue("Light.Position", ViewMatrix * worldLight);
+        mProgram->setUniformValue("Light.Intensity", QVector3D(0.9f, 0.9f, 0.9f));
 
         mProgram->setUniformValue("Material.Kd", 0.9f, 0.5f, 0.3f);
         mProgram->setUniformValue("Material.Ks", 0.95f, 0.95f, 0.95f);
